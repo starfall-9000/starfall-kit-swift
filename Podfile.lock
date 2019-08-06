@@ -1,3 +1,53 @@
-PODFILE CHECKSUM: 17301b4c56111533da851510ba3208e4751c51d2
+PODS:
+  - Action (4.0.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - Alamofire (4.8.2)
+  - AlamofireImage (3.5.2):
+    - Alamofire (~> 4.8)
+  - DDMvvm (1.4.4):
+    - Action
+    - Alamofire
+    - AlamofireImage
+    - ObjectMapper
+    - PureLayout
+    - RxCocoa
+    - RxSwift
+  - ObjectMapper (3.5.1)
+  - PureLayout (3.1.4)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
+
+DEPENDENCIES:
+  - DDMvvm
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Action
+    - Alamofire
+    - AlamofireImage
+    - DDMvvm
+    - ObjectMapper
+    - PureLayout
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+
+SPEC CHECKSUMS:
+  Action: 0d14986aad0f1330aa27ce65d0cdeaacbb63d91c
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
+  DDMvvm: f0804001d26485745331756a073af2b3e0fe3be0
+  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+
+PODFILE CHECKSUM: 733ad275f8501cc114a5ade87c9b722d58650ef9
 
 COCOAPODS: 1.5.3

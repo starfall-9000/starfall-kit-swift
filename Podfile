@@ -6,5 +6,6 @@ target 'SwiftAwesomeProject' do
   use_frameworks!
 
   # Pods for SwiftAwesomeProject
+  pod 'DDMvvm'
 
 end
