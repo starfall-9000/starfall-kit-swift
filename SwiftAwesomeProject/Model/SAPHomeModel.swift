@@ -1,5 +1,5 @@
 //
-//  HomeModel.swift
+//  SAPHomeModel.swift
 //  SwiftAwesomeProject
 //
 //  Created by An Binh on 8/6/19.
@@ -10,7 +10,7 @@ import UIKit
 import DDMvvm
 import ObjectMapper
 
-class HomeModel: Model {
+class SAPHomeModel: Model {
     var title = ""
     var desc = ""
     

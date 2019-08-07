@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		323BCD9722F945230067D2E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BCD9622F945230067D2E0 /* HomeViewController.swift */; };
-		323BCD9922F945670067D2E0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BCD9822F945670067D2E0 /* HomeViewModel.swift */; };
-		323BCD9C22F945D10067D2E0 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BCD9B22F945D10067D2E0 /* HomeModel.swift */; };
-		323BCD9F22F946A40067D2E0 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BCD9E22F946A40067D2E0 /* HomeCell.swift */; };
-		323BCDA122F946D40067D2E0 /* HomeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BCDA022F946D40067D2E0 /* HomeCellViewModel.swift */; };
+		323BCD9722F945230067D2E0 /* SAPHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BCD9622F945230067D2E0 /* SAPHomeViewController.swift */; };
+		323BCD9922F945670067D2E0 /* SAPHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BCD9822F945670067D2E0 /* SAPHomeViewModel.swift */; };
+		323BCD9C22F945D10067D2E0 /* SAPHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BCD9B22F945D10067D2E0 /* SAPHomeModel.swift */; };
+		323BCD9F22F946A40067D2E0 /* SAPHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BCD9E22F946A40067D2E0 /* SAPHomeCell.swift */; };
+		323BCDA122F946D40067D2E0 /* SAPHomeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BCDA022F946D40067D2E0 /* SAPHomeCellViewModel.swift */; };
 		3271159522F9320A0057504D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3271159422F9320A0057504D /* AppDelegate.swift */; };
 		3271159C22F9320B0057504D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3271159B22F9320B0057504D /* Assets.xcassets */; };
 		F612AC8B148A63B9359B282D /* Pods_SwiftAwesomeProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7334C4B167B7CFD92DEA62B /* Pods_SwiftAwesomeProject.framework */; };
@@ -19,11 +19,11 @@
 
 /* Begin PBXFileReference section */
 		19EDD9E705A684D2270A347F /* Pods-SwiftAwesomeProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftAwesomeProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftAwesomeProject/Pods-SwiftAwesomeProject.release.xcconfig"; sourceTree = "<group>"; };
-		323BCD9622F945230067D2E0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		323BCD9822F945670067D2E0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		323BCD9B22F945D10067D2E0 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
-		323BCD9E22F946A40067D2E0 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
-		323BCDA022F946D40067D2E0 /* HomeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellViewModel.swift; sourceTree = "<group>"; };
+		323BCD9622F945230067D2E0 /* SAPHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPHomeViewController.swift; sourceTree = "<group>"; };
+		323BCD9822F945670067D2E0 /* SAPHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPHomeViewModel.swift; sourceTree = "<group>"; };
+		323BCD9B22F945D10067D2E0 /* SAPHomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPHomeModel.swift; sourceTree = "<group>"; };
+		323BCD9E22F946A40067D2E0 /* SAPHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPHomeCell.swift; sourceTree = "<group>"; };
+		323BCDA022F946D40067D2E0 /* SAPHomeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPHomeCellViewModel.swift; sourceTree = "<group>"; };
 		3271159122F9320A0057504D /* SwiftAwesomeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftAwesomeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3271159422F9320A0057504D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3271159B22F9320B0057504D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,8 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				323BCD9D22F946820067D2E0 /* Cell */,
-				323BCD9622F945230067D2E0 /* HomeViewController.swift */,
-				323BCD9822F945670067D2E0 /* HomeViewModel.swift */,
+				323BCD9622F945230067D2E0 /* SAPHomeViewController.swift */,
+				323BCD9822F945670067D2E0 /* SAPHomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -65,7 +65,7 @@
 		323BCD9A22F945A20067D2E0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				323BCD9B22F945D10067D2E0 /* HomeModel.swift */,
+				323BCD9B22F945D10067D2E0 /* SAPHomeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -73,8 +73,8 @@
 		323BCD9D22F946820067D2E0 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				323BCD9E22F946A40067D2E0 /* HomeCell.swift */,
-				323BCDA022F946D40067D2E0 /* HomeCellViewModel.swift */,
+				323BCD9E22F946A40067D2E0 /* SAPHomeCell.swift */,
+				323BCDA022F946D40067D2E0 /* SAPHomeCellViewModel.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -260,12 +260,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				323BCD9C22F945D10067D2E0 /* HomeModel.swift in Sources */,
+				323BCD9C22F945D10067D2E0 /* SAPHomeModel.swift in Sources */,
 				3271159522F9320A0057504D /* AppDelegate.swift in Sources */,
-				323BCD9922F945670067D2E0 /* HomeViewModel.swift in Sources */,
-				323BCDA122F946D40067D2E0 /* HomeCellViewModel.swift in Sources */,
-				323BCD9722F945230067D2E0 /* HomeViewController.swift in Sources */,
-				323BCD9F22F946A40067D2E0 /* HomeCell.swift in Sources */,
+				323BCD9922F945670067D2E0 /* SAPHomeViewModel.swift in Sources */,
+				323BCDA122F946D40067D2E0 /* SAPHomeCellViewModel.swift in Sources */,
+				323BCD9722F945230067D2E0 /* SAPHomeViewController.swift in Sources */,
+				323BCD9F22F946A40067D2E0 /* SAPHomeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

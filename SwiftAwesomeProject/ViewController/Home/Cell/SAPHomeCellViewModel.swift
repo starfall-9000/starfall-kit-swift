@@ -1,5 +1,5 @@
 //
-//  HomeCellViewModel.swift
+//  SAPHomeCellViewModel.swift
 //  SwiftAwesomeProject
 //
 //  Created by An Binh on 8/6/19.
@@ -10,7 +10,7 @@ import UIKit
 import DDMvvm
 import RxCocoa
 
-class HomeCellViewModel: CellViewModel<HomeModel> {
+class SAPHomeCellViewModel: CellViewModel<SAPHomeModel> {
     let rxTitle = BehaviorRelay<String?> (value: nil)
     let rxDesc = BehaviorRelay<String?> (value: nil)
     

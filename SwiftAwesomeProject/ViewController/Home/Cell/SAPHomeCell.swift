@@ -1,5 +1,5 @@
 //
-//  HomeCell.swift
+//  SAPHomeCell.swift
 //  SwiftAwesomeProject
 //
 //  Created by An Binh on 8/6/19.
@@ -9,7 +9,7 @@
 import UIKit
 import DDMvvm
 
-class HomeCell: TableCell<HomeCellViewModel> {
+class SAPHomeCell: TableCell<SAPHomeCellViewModel> {
     let titleLabel = UILabel()
     let descLabel = UILabel()
     

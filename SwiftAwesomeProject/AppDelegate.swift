@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DependencyManager.shared.registerDefaults()
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let viewController = HomeViewController(viewModel: HomeViewModel())
+        let viewController = SAPHomeViewController(viewModel: SAPHomeViewModel())
         let navVC = NavigationPage(rootViewController: viewController)
         navVC.statusBarStyle = .default
         window?.rootViewController = navVC
