@@ -8,7 +8,14 @@
 
 import UIKit
 import DDMvvm
+import RxCocoa
 
 class HomeCellViewModel: CellViewModel<HomeModel> {
-
+    let rxTitle = BehaviorRelay<String?> (value: nil)
+    let rxDesc = BehaviorRelay<String?> (value: nil)
+    
+    override func react() {
+        self.rxTitle.accept(self.model?.title)
+        self.rxDesc.accept(self.model?.desc)
+    }
 }
