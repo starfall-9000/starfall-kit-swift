@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DDMvvm
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        DependencyManager.shared.registerDefaults()
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let viewController = HomeViewController(viewModel: HomeViewModel())
+        let navVC = NavigationPage(rootViewController: viewController)
+        navVC.statusBarStyle = .default
+        window?.rootViewController = navVC
+        window?.makeKeyAndVisible()
         return true
     }
 
