@@ -25,9 +25,9 @@ class SAPHomeCell: TableCell<SAPHomeCellViewModel> {
         let layout = StackLayout().direction(.vertical).children([
                 titleLabel,
                 descLabel
-            ])
+            ]).spacing(8)
         contentView.addSubview(layout)
-        layout.autoPinEdgesToSuperviewEdges(with: .all(5))
+        layout.autoPinEdgesToSuperviewEdges(with: .all(16))
         self.accessoryType = .disclosureIndicator
     }
     

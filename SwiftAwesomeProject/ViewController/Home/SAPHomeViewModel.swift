@@ -21,12 +21,30 @@ class SAPHomeViewModel: ListViewModel<SAPHomeModel, SAPHomeCellViewModel> {
         self.itemsSource.append(listItem.toCellViewModels())
     }
     
+    override func selectedItemDidChange(_ cellViewModel: SAPHomeCellViewModel) {
+        if let page = pageToNavigate(cellViewModel) {
+            self.navigationService.push(to: page, options: .defaultOptions)
+        }
+    }
+    
     func getListItem() -> [SAPHomeModel] {
         return [
-            SAPHomeModel(withTitle: "MVVM Examples", desc: "Examples about different ways to use base classes Page, ListPage and CollectionPage."),
-            SAPHomeModel(withTitle: "Data Binding Examples", desc: "Examples about how to use data binding."),
-            SAPHomeModel(withTitle: "Service Injection Examples", desc: "Examples about how to create a service and register it; how to inject to our ViewModel."),
-            SAPHomeModel(withTitle: "Transition Examples", desc: "Examples about how to create a custom transitioning animation and apply it."),
+            SAPHomeModel(withTitle: "Contact List Examples", desc: "Examples about creating contact list by MVVM and rxSwift")
         ]
+    }
+    
+    func pageToNavigate(_ cellViewModel: SAPHomeCellViewModel) -> UIViewController? {
+        guard let indexPath = self.rxSelectedIndex.value else { return nil }
+        
+        var page: UIViewController?
+        switch indexPath.row {
+        case 0:
+            let viewModel = SAPContactViewModel(model: cellViewModel.model)
+            page = SAPContactViewController(viewModel: viewModel)
+            
+        default: ()
+        }
+        
+        return page
     }
 }

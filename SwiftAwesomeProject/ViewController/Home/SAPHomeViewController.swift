@@ -26,4 +26,10 @@ class SAPHomeViewController: ListPage<SAPHomeViewModel> {
     override func cellIdentifier(_ cellViewModel: SAPHomeCellViewModel) -> String {
         return SAPHomeCell.identifier
     }
+    
+    override func selectedItemDidChange(_ cellViewModel: SAPHomeCellViewModel) {
+        if let indexPath = self.viewModel?.rxSelectedIndex.value {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
 }
