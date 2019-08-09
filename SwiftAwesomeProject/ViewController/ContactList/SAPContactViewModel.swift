@@ -23,6 +23,16 @@ class SAPContactViewModel: ListViewModel<Model, SAPContactCellViewModel> {
         let viewModel = SAPContactEditViewModel(model: model)
         let viewController = SAPContactEditViewControllerr(viewModel: viewModel)
         
+        viewModel.saveAction.executionObservables.switchLatest().subscribe(onNext: { [weak self] (contactModel) in
+            guard let `self` = self else { return }
+            if model == nil {
+                let cvm = SAPContactCellViewModel(model: contactModel)
+                self.itemsSource.append(cvm)
+            } else if let cvm = self.rxSelectedItem.value {
+                cvm.model = contactModel
+            }
+        }) => disposeBag
+        
         let navVC = SAPPopupWrapperNavigationViewController(rootViewController: viewController)
         self.navigationService.push(to: navVC, options: PushOptions(pushType: .popup(.defaultOptions)))
     }

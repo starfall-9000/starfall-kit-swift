@@ -61,6 +61,16 @@ class SAPContactEditViewControllerr: Page<SAPContactEditViewModel> {
             ])
     }
     
+    override func bindViewAndViewModel() {
+        guard let viewModel = self.viewModel else { return }
+        
+        viewModel.rxName <~> self.nameTxt.rx.text => disposeBag
+        viewModel.rxPhone <~> self.phoneTxt.rx.text => disposeBag
+        
+        self.cancelBtn.rx.bind(to: viewModel.cancelAction, input: ())
+        self.submitBtn.rx.bind(to: viewModel.saveAction, input: ())
+    }
+    
     override func onBack() {
         self.navigationService.pop(with: PopOptions(popType: .dismissPopup))
     }
