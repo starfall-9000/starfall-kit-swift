@@ -15,6 +15,10 @@ class SAPContactViewModel: ListViewModel<Model, SAPContactCellViewModel> {
         return Action() { .just(self.add()) }
     }()
     
+    override func selectedItemDidChange(_ cellViewModel: SAPContactCellViewModel) {
+        handleContactModification(cellViewModel.model)
+    }
+    
     private func add() {
         handleContactModification()
     }

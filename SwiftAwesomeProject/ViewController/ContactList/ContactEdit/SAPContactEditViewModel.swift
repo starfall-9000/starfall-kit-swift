@@ -29,6 +29,9 @@ class SAPContactEditViewModel: ViewModel<SAPContactModel> {
     }()
     
     override func react() {
+        self.rxName.accept(model?.name)
+        self.rxPhone.accept(model?.phone)
+        
         Observable.combineLatest(self.rxName, self.rxPhone) {
             name, phone -> Bool in
             return !name.isNilOrEmpty && !phone.isNilOrEmpty
