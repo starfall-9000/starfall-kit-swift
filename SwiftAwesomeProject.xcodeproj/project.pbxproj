@@ -16,6 +16,7 @@
 		3258127C2301829100A54C86 /* SAPSearchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3258127B2301829100A54C86 /* SAPSearchListViewModel.swift */; };
 		3258127F230182F900A54C86 /* SAPSearchListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3258127E230182F900A54C86 /* SAPSearchListCell.swift */; };
 		325812812301831800A54C86 /* SAPSearchListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325812802301831800A54C86 /* SAPSearchListCellViewModel.swift */; };
+		325812832301851C00A54C86 /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325812822301851C00A54C86 /* GlobalConstant.swift */; };
 		3271159522F9320A0057504D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3271159422F9320A0057504D /* AppDelegate.swift */; };
 		3271159C22F9320B0057504D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3271159B22F9320B0057504D /* Assets.xcassets */; };
 		3290048F22FBD6E900D18F87 /* SAPContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3290048E22FBD6E900D18F87 /* SAPContactViewController.swift */; };
@@ -40,6 +41,7 @@
 		3258127B2301829100A54C86 /* SAPSearchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPSearchListViewModel.swift; sourceTree = "<group>"; };
 		3258127E230182F900A54C86 /* SAPSearchListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPSearchListCell.swift; sourceTree = "<group>"; };
 		325812802301831800A54C86 /* SAPSearchListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPSearchListCellViewModel.swift; sourceTree = "<group>"; };
+		325812822301851C00A54C86 /* GlobalConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
 		3271159122F9320A0057504D /* SwiftAwesomeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftAwesomeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3271159422F9320A0057504D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3271159B22F9320B0057504D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				3271159422F9320A0057504D /* AppDelegate.swift */,
 				3271159B22F9320B0057504D /* Assets.xcassets */,
 				327115A022F9320B0057504D /* Info.plist */,
+				325812822301851C00A54C86 /* GlobalConstant.swift */,
 			);
 			path = SwiftAwesomeProject;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				323BCD9C22F945D10067D2E0 /* SAPHomeModel.swift in Sources */,
 				3293DB4E22FD2AE300CC48DF /* SAPPopupWrapperNavigationViewController.swift in Sources */,
 				3271159522F9320A0057504D /* AppDelegate.swift in Sources */,
+				325812832301851C00A54C86 /* GlobalConstant.swift in Sources */,
 				3293DB4B22FD147B00CC48DF /* SAPContactEditViewModel.swift in Sources */,
 				3290049822FBD7ED00D18F87 /* SAPContactCell.swift in Sources */,
 				323BCD9922F945670067D2E0 /* SAPHomeViewModel.swift in Sources */,
