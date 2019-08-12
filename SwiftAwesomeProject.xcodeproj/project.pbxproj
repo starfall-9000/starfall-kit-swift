@@ -19,7 +19,7 @@
 		3290049422FBD76700D18F87 /* SAPContactCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3290049322FBD76700D18F87 /* SAPContactCellViewModel.swift */; };
 		3290049622FBD79100D18F87 /* SAPContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3290049522FBD79100D18F87 /* SAPContactModel.swift */; };
 		3290049822FBD7ED00D18F87 /* SAPContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3290049722FBD7ED00D18F87 /* SAPContactCell.swift */; };
-		3293DB4922FD144400CC48DF /* SAPContactEditViewControllerr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3293DB4822FD144400CC48DF /* SAPContactEditViewControllerr.swift */; };
+		3293DB4922FD144400CC48DF /* SAPContactEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3293DB4822FD144400CC48DF /* SAPContactEditViewController.swift */; };
 		3293DB4B22FD147B00CC48DF /* SAPContactEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3293DB4A22FD147B00CC48DF /* SAPContactEditViewModel.swift */; };
 		3293DB4E22FD2AE300CC48DF /* SAPPopupWrapperNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3293DB4D22FD2AE300CC48DF /* SAPPopupWrapperNavigationViewController.swift */; };
 		F612AC8B148A63B9359B282D /* Pods_SwiftAwesomeProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7334C4B167B7CFD92DEA62B /* Pods_SwiftAwesomeProject.framework */; };
@@ -41,7 +41,7 @@
 		3290049322FBD76700D18F87 /* SAPContactCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPContactCellViewModel.swift; sourceTree = "<group>"; };
 		3290049522FBD79100D18F87 /* SAPContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPContactModel.swift; sourceTree = "<group>"; };
 		3290049722FBD7ED00D18F87 /* SAPContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPContactCell.swift; sourceTree = "<group>"; };
-		3293DB4822FD144400CC48DF /* SAPContactEditViewControllerr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPContactEditViewControllerr.swift; sourceTree = "<group>"; };
+		3293DB4822FD144400CC48DF /* SAPContactEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPContactEditViewController.swift; sourceTree = "<group>"; };
 		3293DB4A22FD147B00CC48DF /* SAPContactEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPContactEditViewModel.swift; sourceTree = "<group>"; };
 		3293DB4D22FD2AE300CC48DF /* SAPPopupWrapperNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPPopupWrapperNavigationViewController.swift; sourceTree = "<group>"; };
 		682C2278A5CAE26EB6C148D0 /* Pods-SwiftAwesomeProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftAwesomeProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftAwesomeProject/Pods-SwiftAwesomeProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 		3293DB4722FD13F300CC48DF /* ContactEdit */ = {
 			isa = PBXGroup;
 			children = (
-				3293DB4822FD144400CC48DF /* SAPContactEditViewControllerr.swift */,
+				3293DB4822FD144400CC48DF /* SAPContactEditViewController.swift */,
 				3293DB4A22FD147B00CC48DF /* SAPContactEditViewModel.swift */,
 			);
 			path = ContactEdit;
@@ -327,7 +327,7 @@
 				3290049422FBD76700D18F87 /* SAPContactCellViewModel.swift in Sources */,
 				323BCD9722F945230067D2E0 /* SAPHomeViewController.swift in Sources */,
 				323BCD9F22F946A40067D2E0 /* SAPHomeCell.swift in Sources */,
-				3293DB4922FD144400CC48DF /* SAPContactEditViewControllerr.swift in Sources */,
+				3293DB4922FD144400CC48DF /* SAPContactEditViewController.swift in Sources */,
 				3290048F22FBD6E900D18F87 /* SAPContactViewController.swift in Sources */,
 				3290049622FBD79100D18F87 /* SAPContactModel.swift in Sources */,
 			);

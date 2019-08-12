@@ -1,5 +1,5 @@
 //
-//  SAPContactEditViewControllerr.swift
+//  SAPContactEditViewController.swift
 //  SwiftAwesomeProject
 //
 //  Created by An Binh on 8/9/19.
@@ -9,7 +9,7 @@
 import UIKit
 import DDMvvm
 
-class SAPContactEditViewControllerr: Page<SAPContactEditViewModel> {
+class SAPContactEditViewController: Page<SAPContactEditViewModel> {
     let scrollView = ScrollLayout()
     let containerView = UIView()
     

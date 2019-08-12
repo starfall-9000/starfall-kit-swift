@@ -25,7 +25,7 @@ class SAPContactViewModel: ListViewModel<Model, SAPContactCellViewModel> {
     
     private func handleContactModification(_ model: SAPContactModel? = nil) {
         let viewModel = SAPContactEditViewModel(model: model)
-        let viewController = SAPContactEditViewControllerr(viewModel: viewModel)
+        let viewController = SAPContactEditViewController(viewModel: viewModel)
         
         viewModel.saveAction.executionObservables.switchLatest().subscribe(onNext: { [weak self] (contactModel) in
             guard let `self` = self else { return }
