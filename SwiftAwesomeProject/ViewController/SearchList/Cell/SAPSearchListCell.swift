@@ -9,6 +9,6 @@
 import UIKit
 import DDMvvm
 
-class SAPSearchListCell: TableCell<SAPSearchListCellViewModel> {
+class SAPSearchListCell: CollectionCell<SAPSearchListCellViewModel> {
     
 }

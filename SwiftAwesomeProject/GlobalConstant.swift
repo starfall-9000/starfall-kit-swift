@@ -7,3 +7,12 @@
 //
 
 import Foundation
+import UIKit
+
+struct SAPMargin {
+    static let normal: CGFloat = 16.0
+}
+
+struct SAPSize {
+    static let searchBar: CGSize = CGSize(width: 400, height: 30)
+}
