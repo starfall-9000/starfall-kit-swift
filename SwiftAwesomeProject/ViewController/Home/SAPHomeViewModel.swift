@@ -29,7 +29,8 @@ class SAPHomeViewModel: ListViewModel<SAPHomeModel, SAPHomeCellViewModel> {
     
     func getListItem() -> [SAPHomeModel] {
         return [
-            SAPHomeModel(withTitle: "Contact List Examples", desc: "Examples about creating contact list by MVVM and rxSwift")
+            SAPHomeModel(withTitle: "Contact List Example", desc: "Example about creating contact list by MVVM and rxSwift"),
+            SAPHomeModel(withTitle: "Search List Example", desc: "Example about searching image by MVVM and rxSwift")
         ]
     }
     
@@ -41,6 +42,9 @@ class SAPHomeViewModel: ListViewModel<SAPHomeModel, SAPHomeCellViewModel> {
         case 0:
             let viewModel = SAPContactViewModel(model: cellViewModel.model)
             page = SAPContactViewController(viewModel: viewModel)
+        case 1:
+            let viewModel = SAPSearchListViewModel(model: cellViewModel.model)
+            page = SAPSearchListViewController(viewModel: viewModel)
             
         default: ()
         }

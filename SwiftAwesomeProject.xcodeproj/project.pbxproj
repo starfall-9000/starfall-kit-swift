@@ -12,6 +12,10 @@
 		323BCD9C22F945D10067D2E0 /* SAPHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BCD9B22F945D10067D2E0 /* SAPHomeModel.swift */; };
 		323BCD9F22F946A40067D2E0 /* SAPHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BCD9E22F946A40067D2E0 /* SAPHomeCell.swift */; };
 		323BCDA122F946D40067D2E0 /* SAPHomeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BCDA022F946D40067D2E0 /* SAPHomeCellViewModel.swift */; };
+		3258127A2301826700A54C86 /* SAPSearchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325812792301826700A54C86 /* SAPSearchListViewController.swift */; };
+		3258127C2301829100A54C86 /* SAPSearchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3258127B2301829100A54C86 /* SAPSearchListViewModel.swift */; };
+		3258127F230182F900A54C86 /* SAPSearchListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3258127E230182F900A54C86 /* SAPSearchListCell.swift */; };
+		325812812301831800A54C86 /* SAPSearchListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325812802301831800A54C86 /* SAPSearchListCellViewModel.swift */; };
 		3271159522F9320A0057504D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3271159422F9320A0057504D /* AppDelegate.swift */; };
 		3271159C22F9320B0057504D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3271159B22F9320B0057504D /* Assets.xcassets */; };
 		3290048F22FBD6E900D18F87 /* SAPContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3290048E22FBD6E900D18F87 /* SAPContactViewController.swift */; };
@@ -32,6 +36,10 @@
 		323BCD9B22F945D10067D2E0 /* SAPHomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPHomeModel.swift; sourceTree = "<group>"; };
 		323BCD9E22F946A40067D2E0 /* SAPHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPHomeCell.swift; sourceTree = "<group>"; };
 		323BCDA022F946D40067D2E0 /* SAPHomeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPHomeCellViewModel.swift; sourceTree = "<group>"; };
+		325812792301826700A54C86 /* SAPSearchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPSearchListViewController.swift; sourceTree = "<group>"; };
+		3258127B2301829100A54C86 /* SAPSearchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPSearchListViewModel.swift; sourceTree = "<group>"; };
+		3258127E230182F900A54C86 /* SAPSearchListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPSearchListCell.swift; sourceTree = "<group>"; };
+		325812802301831800A54C86 /* SAPSearchListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPSearchListCellViewModel.swift; sourceTree = "<group>"; };
 		3271159122F9320A0057504D /* SwiftAwesomeProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftAwesomeProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3271159422F9320A0057504D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3271159B22F9320B0057504D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,6 +71,7 @@
 		323BCD9422F944C90067D2E0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				325812782301823400A54C86 /* SearchList */,
 				3290048D22FBD55B00D18F87 /* ContactList */,
 				323BCD9522F944DE0067D2E0 /* Home */,
 			);
@@ -93,6 +102,25 @@
 			children = (
 				323BCD9E22F946A40067D2E0 /* SAPHomeCell.swift */,
 				323BCDA022F946D40067D2E0 /* SAPHomeCellViewModel.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		325812782301823400A54C86 /* SearchList */ = {
+			isa = PBXGroup;
+			children = (
+				3258127D230182D000A54C86 /* Cell */,
+				325812792301826700A54C86 /* SAPSearchListViewController.swift */,
+				3258127B2301829100A54C86 /* SAPSearchListViewModel.swift */,
+			);
+			path = SearchList;
+			sourceTree = "<group>";
+		};
+		3258127D230182D000A54C86 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3258127E230182F900A54C86 /* SAPSearchListCell.swift */,
+				325812802301831800A54C86 /* SAPSearchListCellViewModel.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -316,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				325812812301831800A54C86 /* SAPSearchListCellViewModel.swift in Sources */,
 				3290049122FBD72700D18F87 /* SAPContactViewModel.swift in Sources */,
 				323BCD9C22F945D10067D2E0 /* SAPHomeModel.swift in Sources */,
 				3293DB4E22FD2AE300CC48DF /* SAPPopupWrapperNavigationViewController.swift in Sources */,
@@ -325,11 +354,14 @@
 				323BCD9922F945670067D2E0 /* SAPHomeViewModel.swift in Sources */,
 				323BCDA122F946D40067D2E0 /* SAPHomeCellViewModel.swift in Sources */,
 				3290049422FBD76700D18F87 /* SAPContactCellViewModel.swift in Sources */,
+				3258127F230182F900A54C86 /* SAPSearchListCell.swift in Sources */,
+				3258127C2301829100A54C86 /* SAPSearchListViewModel.swift in Sources */,
 				323BCD9722F945230067D2E0 /* SAPHomeViewController.swift in Sources */,
 				323BCD9F22F946A40067D2E0 /* SAPHomeCell.swift in Sources */,
 				3293DB4922FD144400CC48DF /* SAPContactEditViewController.swift in Sources */,
 				3290048F22FBD6E900D18F87 /* SAPContactViewController.swift in Sources */,
 				3290049622FBD79100D18F87 /* SAPContactModel.swift in Sources */,
+				3258127A2301826700A54C86 /* SAPSearchListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
