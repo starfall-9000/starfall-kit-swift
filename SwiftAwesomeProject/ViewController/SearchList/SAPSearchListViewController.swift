@@ -25,6 +25,18 @@ class SAPSearchListViewController: CollectionPage<SAPSearchListViewModel> {
         self.setupCollection()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if let textField = searchBar.subviews[0].subviews.last as? UITextField {
+            textField.rightView = indicatorView
+            textField.rightViewMode = .always
+        }
+        
+        loadMoreView.transform = CGAffineTransform(translationX: 0, y: loadMoreView.frame.height)
+        loadMoreView.isHidden = false
+    }
+    
     func setupSearchBar() {
         indicatorView.hidesWhenStopped = true
         searchBar.placeholder = "Search for Flickr images"
@@ -53,8 +65,25 @@ class SAPSearchListViewController: CollectionPage<SAPSearchListViewModel> {
     override func bindViewAndViewModel() {
         super.bindViewAndViewModel()
         
+        self.bindSearchText()
+        self.bindIndicatorInSearchBar()
+    }
+    
+    private func bindSearchText() {
         guard let viewModel = viewModel else { return }
         viewModel.rxSearchText <~> searchBar.rx.text => disposeBag
+    }
+    
+    private func bindIndicatorInSearchBar() {
+        guard let viewModel = viewModel else { return }
+        viewModel.rxIsSearching.subscribe(onNext: { [weak self] (value) in
+            guard let self = self else { return }
+            if value {
+                self.indicatorView.startAnimating()
+            } else {
+                self.indicatorView.stopAnimating()
+            }
+        }) => disposeBag
     }
     
     override func cellIdentifier(_ cellViewModel: SAPSearchListCellViewModel) -> String {
