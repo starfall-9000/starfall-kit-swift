@@ -16,6 +16,7 @@ struct SAPMargin {
 }
 
 struct SAPSize {
+    static let iPhoneXSafeBottom: CGFloat = 34
     static let searchBar: CGSize = CGSize(width: 400, height: 30)
 }
 

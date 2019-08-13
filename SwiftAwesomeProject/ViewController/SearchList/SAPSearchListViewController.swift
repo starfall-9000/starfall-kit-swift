@@ -33,7 +33,7 @@ class SAPSearchListViewController: CollectionPage<SAPSearchListViewModel> {
             textField.rightViewMode = .always
         }
         
-        loadMoreView.transform = CGAffineTransform(translationX: 0, y: loadMoreView.frame.height)
+        loadMoreView.transform = CGAffineTransform(translationX: 0, y: loadMoreView.frame.height + SAPSize.iPhoneXSafeBottom)
         loadMoreView.isHidden = false
     }
     
@@ -45,9 +45,10 @@ class SAPSearchListViewController: CollectionPage<SAPSearchListViewModel> {
     
     func setupLoadMore() {
         loadMoreView.isHidden = true
-        loadMoreView.backgroundColor = UIColor(r: 0, g: 0, b: 0, a: 0.5)
+        loadMoreView.backgroundColor = .white
         view.addSubview(loadMoreView)
-        loadMoreView.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .top)
+        collectionView.autoPinEdgesToSuperviewSafeArea(with: .zero)
+        loadMoreView.autoPinEdgesToSuperviewSafeArea(with: .zero, excludingEdge: .top)
         
         loadMoreIndicator.hidesWhenStopped = false
         loadMoreIndicator.startAnimating()
@@ -56,6 +57,7 @@ class SAPSearchListViewController: CollectionPage<SAPSearchListViewModel> {
         loadMoreIndicator.autoAlignAxis(toSuperviewAxis: .vertical)
         loadMoreIndicator.autoPinEdge(toSuperviewEdge: .top, withInset: 10)
         loadMoreIndicator.autoPinEdge(toSuperviewEdge: .bottom, withInset: 10)
+        loadMoreIndicator.color = .black
     }
     
     func setupCollection() {
@@ -67,6 +69,8 @@ class SAPSearchListViewController: CollectionPage<SAPSearchListViewModel> {
         
         self.bindSearchText()
         self.bindIndicatorInSearchBar()
+        self.bindIndicatorInLoadingMore()
+        self.bindCollectionViewLoadingMore()
     }
     
     private func bindSearchText() {
@@ -76,13 +80,34 @@ class SAPSearchListViewController: CollectionPage<SAPSearchListViewModel> {
     
     private func bindIndicatorInSearchBar() {
         guard let viewModel = viewModel else { return }
-        viewModel.rxIsSearching.subscribe(onNext: { [weak self] (value) in
+        viewModel.rxIsSearching.asDriver().drive(onNext: { [weak self] (value) in
             guard let self = self else { return }
             if value {
                 self.indicatorView.startAnimating()
             } else {
                 self.indicatorView.stopAnimating()
             }
+        }) => disposeBag
+    }
+    
+    private func bindIndicatorInLoadingMore() {
+        guard let viewModel = viewModel else { return }
+        viewModel.rxIsLoadingMore.asDriver().drive(onNext: { (value) in
+            UIView.animate(withDuration: 0.5, animations: { [weak self] in
+                guard let self = self else { return }
+                if value {
+                    self.loadMoreView.transform = .identity
+                } else {
+                    self.loadMoreView.transform = CGAffineTransform(translationX: 0, y: self.loadMoreView.frame.height + SAPSize.iPhoneXSafeBottom)
+                }
+            })
+        }) => disposeBag
+    }
+    
+    private func bindCollectionViewLoadingMore() {
+        guard let viewModel = viewModel else { return }
+        collectionView.rx.endReach.subscribe(onNext: {
+            viewModel.loadMoreAction.execute()
         }) => disposeBag
     }
     

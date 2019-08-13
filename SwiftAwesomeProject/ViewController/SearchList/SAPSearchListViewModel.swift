@@ -11,10 +11,12 @@ import DDMvvm
 import RxCocoa
 import RxSwift
 import Alamofire
+import Action
 
 class SAPSearchListViewModel: ListViewModel<Model, SAPSearchListCellViewModel> {
     let rxSearchText = BehaviorRelay<String?> (value: nil)
     let rxIsSearching = BehaviorRelay<Bool> (value: false)
+    let rxIsLoadingMore = BehaviorRelay<Bool> (value: false)
     
     var tmpBag: DisposeBag?
     var page = 1
@@ -35,6 +37,10 @@ class SAPSearchListViewModel: ListViewModel<Model, SAPSearchListCellViewModel> {
             "text": rxSearchText.value ?? ""
         ]
     }
+    
+    lazy var loadMoreAction: Action<Void, Void> = {
+        return Action() { .just(self.loadMore()) }
+    }()
     
     override func react() {
         self.reactSearchTextDidChange()
@@ -80,5 +86,24 @@ class SAPSearchListViewModel: ListViewModel<Model, SAPSearchListCellViewModel> {
             done = true
         }
         return response.photos.toCellViewModels() as [SAPSearchListCellViewModel]
+    }
+    
+    private func loadMore() {
+        if itemsSource.countElements() <= 0 || done || rxIsLoadingMore.value { return }
+        
+        tmpBag = DisposeBag()
+        rxIsLoadingMore.accept(true)
+        page += 1
+        
+        let obs: Single<SAPFlickrSearchResponse> = jsonService.get("", params: params, parameterEncoding: URLEncoding.queryString)
+        obs.map(prepareSources)
+            .subscribe(onSuccess: { [weak self] (cellViewModels) in
+                guard let self = self else { return }
+                self.itemsSource.append(cellViewModels)
+                self.rxIsLoadingMore.accept(false)
+            }, onError: { [weak self] (error) in
+                    guard let self = self else { return }
+                    self.rxIsLoadingMore.accept(false)
+            }) => tmpBag
     }
 }
