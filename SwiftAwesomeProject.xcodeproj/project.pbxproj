@@ -27,6 +27,9 @@
 		3293DB4922FD144400CC48DF /* SAPContactEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3293DB4822FD144400CC48DF /* SAPContactEditViewController.swift */; };
 		3293DB4B22FD147B00CC48DF /* SAPContactEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3293DB4A22FD147B00CC48DF /* SAPContactEditViewModel.swift */; };
 		3293DB4E22FD2AE300CC48DF /* SAPPopupWrapperNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3293DB4D22FD2AE300CC48DF /* SAPPopupWrapperNavigationViewController.swift */; };
+		329B1490230269BE007217D4 /* SAPFlickrSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B148F230269BE007217D4 /* SAPFlickrSearchResponse.swift */; };
+		329B149423026AF2007217D4 /* SAPJSONService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B149323026AF2007217D4 /* SAPJSONService.swift */; };
+		329B149623026B48007217D4 /* SAPJSONServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B149523026B48007217D4 /* SAPJSONServiceProtocol.swift */; };
 		F612AC8B148A63B9359B282D /* Pods_SwiftAwesomeProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7334C4B167B7CFD92DEA62B /* Pods_SwiftAwesomeProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +57,9 @@
 		3293DB4822FD144400CC48DF /* SAPContactEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPContactEditViewController.swift; sourceTree = "<group>"; };
 		3293DB4A22FD147B00CC48DF /* SAPContactEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPContactEditViewModel.swift; sourceTree = "<group>"; };
 		3293DB4D22FD2AE300CC48DF /* SAPPopupWrapperNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPPopupWrapperNavigationViewController.swift; sourceTree = "<group>"; };
+		329B148F230269BE007217D4 /* SAPFlickrSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPFlickrSearchResponse.swift; sourceTree = "<group>"; };
+		329B149323026AF2007217D4 /* SAPJSONService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPJSONService.swift; sourceTree = "<group>"; };
+		329B149523026B48007217D4 /* SAPJSONServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPJSONServiceProtocol.swift; sourceTree = "<group>"; };
 		682C2278A5CAE26EB6C148D0 /* Pods-SwiftAwesomeProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftAwesomeProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftAwesomeProject/Pods-SwiftAwesomeProject.debug.xcconfig"; sourceTree = "<group>"; };
 		C7334C4B167B7CFD92DEA62B /* Pods_SwiftAwesomeProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftAwesomeProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -95,6 +101,7 @@
 			children = (
 				323BCD9B22F945D10067D2E0 /* SAPHomeModel.swift */,
 				3290049522FBD79100D18F87 /* SAPContactModel.swift */,
+				329B148F230269BE007217D4 /* SAPFlickrSearchResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,6 +155,7 @@
 		3271159322F9320A0057504D /* SwiftAwesomeProject */ = {
 			isa = PBXGroup;
 			children = (
+				329B149123026A9A007217D4 /* Helper */,
 				323BCD9A22F945A20067D2E0 /* Model */,
 				323BCD9422F944C90067D2E0 /* ViewController */,
 				3271159422F9320A0057504D /* AppDelegate.swift */,
@@ -194,6 +202,23 @@
 				3293DB4D22FD2AE300CC48DF /* SAPPopupWrapperNavigationViewController.swift */,
 			);
 			path = Wrapper;
+			sourceTree = "<group>";
+		};
+		329B149123026A9A007217D4 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				329B149223026AA1007217D4 /* APIServices */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		329B149223026AA1007217D4 /* APIServices */ = {
+			isa = PBXGroup;
+			children = (
+				329B149323026AF2007217D4 /* SAPJSONService.swift */,
+				329B149523026B48007217D4 /* SAPJSONServiceProtocol.swift */,
+			);
+			path = APIServices;
 			sourceTree = "<group>";
 		};
 		CA68675F16BDCD59AAD0FFB1 /* Frameworks */ = {
@@ -348,6 +373,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				325812812301831800A54C86 /* SAPSearchListCellViewModel.swift in Sources */,
+				329B149423026AF2007217D4 /* SAPJSONService.swift in Sources */,
+				329B149623026B48007217D4 /* SAPJSONServiceProtocol.swift in Sources */,
 				3290049122FBD72700D18F87 /* SAPContactViewModel.swift in Sources */,
 				323BCD9C22F945D10067D2E0 /* SAPHomeModel.swift in Sources */,
 				3293DB4E22FD2AE300CC48DF /* SAPPopupWrapperNavigationViewController.swift in Sources */,
@@ -355,6 +382,7 @@
 				325812832301851C00A54C86 /* GlobalConstant.swift in Sources */,
 				3293DB4B22FD147B00CC48DF /* SAPContactEditViewModel.swift in Sources */,
 				3290049822FBD7ED00D18F87 /* SAPContactCell.swift in Sources */,
+				329B1490230269BE007217D4 /* SAPFlickrSearchResponse.swift in Sources */,
 				323BCD9922F945670067D2E0 /* SAPHomeViewModel.swift in Sources */,
 				323BCDA122F946D40067D2E0 /* SAPHomeCellViewModel.swift in Sources */,
 				3290049422FBD76700D18F87 /* SAPContactCellViewModel.swift in Sources */,
