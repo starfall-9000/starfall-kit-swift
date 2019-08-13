@@ -30,6 +30,8 @@
 		329B1490230269BE007217D4 /* SAPFlickrSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B148F230269BE007217D4 /* SAPFlickrSearchResponse.swift */; };
 		329B149423026AF2007217D4 /* SAPJSONService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B149323026AF2007217D4 /* SAPJSONService.swift */; };
 		329B149623026B48007217D4 /* SAPJSONServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B149523026B48007217D4 /* SAPJSONServiceProtocol.swift */; };
+		329B14982302773D007217D4 /* SAPFlickrPhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B14972302773D007217D4 /* SAPFlickrPhotoModel.swift */; };
+		329B149B230277CF007217D4 /* SAPFlickrSearchTransformType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B149A230277CF007217D4 /* SAPFlickrSearchTransformType.swift */; };
 		F612AC8B148A63B9359B282D /* Pods_SwiftAwesomeProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7334C4B167B7CFD92DEA62B /* Pods_SwiftAwesomeProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		329B148F230269BE007217D4 /* SAPFlickrSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPFlickrSearchResponse.swift; sourceTree = "<group>"; };
 		329B149323026AF2007217D4 /* SAPJSONService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPJSONService.swift; sourceTree = "<group>"; };
 		329B149523026B48007217D4 /* SAPJSONServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPJSONServiceProtocol.swift; sourceTree = "<group>"; };
+		329B14972302773D007217D4 /* SAPFlickrPhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPFlickrPhotoModel.swift; sourceTree = "<group>"; };
+		329B149A230277CF007217D4 /* SAPFlickrSearchTransformType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPFlickrSearchTransformType.swift; sourceTree = "<group>"; };
 		682C2278A5CAE26EB6C148D0 /* Pods-SwiftAwesomeProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftAwesomeProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftAwesomeProject/Pods-SwiftAwesomeProject.debug.xcconfig"; sourceTree = "<group>"; };
 		C7334C4B167B7CFD92DEA62B /* Pods_SwiftAwesomeProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftAwesomeProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -99,9 +103,9 @@
 		323BCD9A22F945A20067D2E0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				329B149923027743007217D4 /* FlickrSearch */,
 				323BCD9B22F945D10067D2E0 /* SAPHomeModel.swift */,
 				3290049522FBD79100D18F87 /* SAPContactModel.swift */,
-				329B148F230269BE007217D4 /* SAPFlickrSearchResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -219,6 +223,16 @@
 				329B149523026B48007217D4 /* SAPJSONServiceProtocol.swift */,
 			);
 			path = APIServices;
+			sourceTree = "<group>";
+		};
+		329B149923027743007217D4 /* FlickrSearch */ = {
+			isa = PBXGroup;
+			children = (
+				329B148F230269BE007217D4 /* SAPFlickrSearchResponse.swift */,
+				329B14972302773D007217D4 /* SAPFlickrPhotoModel.swift */,
+				329B149A230277CF007217D4 /* SAPFlickrSearchTransformType.swift */,
+			);
+			name = FlickrSearch;
 			sourceTree = "<group>";
 		};
 		CA68675F16BDCD59AAD0FFB1 /* Frameworks */ = {
@@ -380,6 +394,7 @@
 				3293DB4E22FD2AE300CC48DF /* SAPPopupWrapperNavigationViewController.swift in Sources */,
 				3271159522F9320A0057504D /* AppDelegate.swift in Sources */,
 				325812832301851C00A54C86 /* GlobalConstant.swift in Sources */,
+				329B149B230277CF007217D4 /* SAPFlickrSearchTransformType.swift in Sources */,
 				3293DB4B22FD147B00CC48DF /* SAPContactEditViewModel.swift in Sources */,
 				3290049822FBD7ED00D18F87 /* SAPContactCell.swift in Sources */,
 				329B1490230269BE007217D4 /* SAPFlickrSearchResponse.swift in Sources */,
@@ -393,6 +408,7 @@
 				3293DB4922FD144400CC48DF /* SAPContactEditViewController.swift in Sources */,
 				3290048F22FBD6E900D18F87 /* SAPContactViewController.swift in Sources */,
 				3290049622FBD79100D18F87 /* SAPContactModel.swift in Sources */,
+				329B14982302773D007217D4 /* SAPFlickrPhotoModel.swift in Sources */,
 				3258127A2301826700A54C86 /* SAPSearchListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

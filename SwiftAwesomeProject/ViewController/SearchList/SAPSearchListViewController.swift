@@ -57,6 +57,10 @@ class SAPSearchListViewController: CollectionPage<SAPSearchListViewModel> {
         viewModel.rxSearchText <~> searchBar.rx.text => disposeBag
     }
     
+    override func cellIdentifier(_ cellViewModel: SAPSearchListCellViewModel) -> String {
+        return SAPSearchListCell.identifier
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let viewWidth = collectionView.frame.width
         

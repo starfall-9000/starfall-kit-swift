@@ -9,6 +9,6 @@
 import UIKit
 import DDMvvm
 
-class SAPSearchListCellViewModel: CellViewModel<Model> {
+class SAPSearchListCellViewModel: CellViewModel<SAPFlickrPhotoModel> {
     
 }

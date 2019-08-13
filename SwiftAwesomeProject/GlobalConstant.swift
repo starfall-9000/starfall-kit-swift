@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+let BASE_FLICKR_SEARCH_URL: String = "https://api.flickr.com/services/rest"
+
 struct SAPMargin {
     static let normal: CGFloat = 16.0
 }
@@ -16,3 +18,4 @@ struct SAPMargin {
 struct SAPSize {
     static let searchBar: CGSize = CGSize(width: 400, height: 30)
 }
+
