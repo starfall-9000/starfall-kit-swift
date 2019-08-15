@@ -10,3 +10,5 @@ _list example_
 
 - implement contact-list, trying `DDMvvm` in table view, text field
 
+- implement search-list, auto searching with throttle and debound by `RxSwift`, call api services with `Alamofile`, map response using `ObjectMapper`, transform model using `TransformType` in `Object Mapper`, implement API Service with `DependencyManager` and `NetworkService` in `DDMvvm`
+
