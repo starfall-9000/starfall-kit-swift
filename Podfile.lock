@@ -13,6 +13,7 @@ PODS:
     - PureLayout
     - RxCocoa
     - RxSwift
+  - lottie-ios (3.1.2)
   - ObjectMapper (3.5.1)
   - PureLayout (3.1.4)
   - RxCocoa (5.0.0):
@@ -24,6 +25,7 @@ PODS:
 
 DEPENDENCIES:
   - DDMvvm
+  - lottie-ios
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -31,6 +33,7 @@ SPEC REPOS:
     - Alamofire
     - AlamofireImage
     - DDMvvm
+    - lottie-ios
     - ObjectMapper
     - PureLayout
     - RxCocoa
@@ -42,12 +45,13 @@ SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
   DDMvvm: f0804001d26485745331756a073af2b3e0fe3be0
+  lottie-ios: 49cd85b1f24f61a7708ad7ec76a523ab2d0e3100
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
 
-PODFILE CHECKSUM: 733ad275f8501cc114a5ade87c9b722d58650ef9
+PODFILE CHECKSUM: 77d65d6b74ddc911f988b728a1f9e859e110923b
 
 COCOAPODS: 1.5.3
