@@ -12,3 +12,5 @@ _list example_
 
 - implement search-list, auto searching with throttle and debound by `RxSwift`, call api services with `Alamofile`, map response using `ObjectMapper`, transform model using `TransformType` in `Object Mapper`, implement API Service with `DependencyManager` and `NetworkService` in `DDMvvm`
 
+- testing `Lottie` library, create example about `AnimatedButton`, `AnimationView`, `AnimatedSwitch`
+
