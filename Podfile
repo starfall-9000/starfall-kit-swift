@@ -7,5 +7,6 @@ target 'SwiftAwesomeProject' do
 
   # Pods for SwiftAwesomeProject
   pod 'DDMvvm'
+  pod 'lottie-ios'
 
 end

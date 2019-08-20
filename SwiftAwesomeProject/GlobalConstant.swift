@@ -20,3 +20,8 @@ struct SAPSize {
     static let searchBar: CGSize = CGSize(width: 400, height: 30)
 }
 
+struct SAPFontSize {
+    static let title: CGFloat = 17.0
+    static let subTitle: CGFloat = 15.0
+}
+
