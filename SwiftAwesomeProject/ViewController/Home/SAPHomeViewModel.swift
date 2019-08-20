@@ -31,7 +31,8 @@ class SAPHomeViewModel: ListViewModel<SAPHomeModel, SAPHomeCellViewModel> {
         return [
             SAPHomeModel(withTitle: "Contact List Example", desc: "Example about creating contact list by MVVM and rxSwift"),
             SAPHomeModel(withTitle: "Search List Example", desc: "Example about searching image by MVVM and rxSwift"),
-            SAPHomeModel(withTitle: "Lottie Example", desc: "Example about animation by Lottie")
+            SAPHomeModel(withTitle: "Lottie Example", desc: "Example about animation by Lottie"),
+            SAPHomeModel(withTitle: "Facebook Reaction Example", desc: "Example about using facebook reaction button, like, love, haha...")
         ]
     }
     
@@ -49,6 +50,9 @@ class SAPHomeViewModel: ListViewModel<SAPHomeModel, SAPHomeCellViewModel> {
         case 2:
             let viewModel = SAPLottieViewModel(model: cellViewModel.model)
             page = SAPLottieViewController(viewModel: viewModel)
+        case 3:
+            let viewModel = SAPReactionViewModel(model: cellViewModel.model)
+            page = SAPReactionViewController(viewModel: viewModel)
             
         default: ()
         }
