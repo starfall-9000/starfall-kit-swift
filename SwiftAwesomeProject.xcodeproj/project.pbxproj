@@ -32,6 +32,14 @@
 		329B149623026B48007217D4 /* SAPJSONServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B149523026B48007217D4 /* SAPJSONServiceProtocol.swift */; };
 		329B14982302773D007217D4 /* SAPFlickrPhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B14972302773D007217D4 /* SAPFlickrPhotoModel.swift */; };
 		329B149B230277CF007217D4 /* SAPFlickrSearchTransformType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329B149A230277CF007217D4 /* SAPFlickrSearchTransformType.swift */; };
+		32D1E022230A55CE0056C6A3 /* SAPLottieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1E021230A55CE0056C6A3 /* SAPLottieModel.swift */; };
+		32D1E024230A568C0056C6A3 /* SAPLottieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1E023230A568C0056C6A3 /* SAPLottieCell.swift */; };
+		32D1E026230A569F0056C6A3 /* SAPLottieCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1E025230A569F0056C6A3 /* SAPLottieCellViewModel.swift */; };
+		32D1E02A230ABB470056C6A3 /* SAPAnimationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1E029230ABB470056C6A3 /* SAPAnimationFactory.swift */; };
+		32D1E02C230ABDA70056C6A3 /* SAPAnimatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D1E02B230ABDA70056C6A3 /* SAPAnimatedButton.swift */; };
+		32ECB3CC23051F27000AA3F3 /* SAPLottieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ECB3CB23051F27000AA3F3 /* SAPLottieViewController.swift */; };
+		32ECB3CE23051FE6000AA3F3 /* SAPLottieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32ECB3CD23051FE6000AA3F3 /* SAPLottieViewModel.swift */; };
+		32ECB3D023054ABD000AA3F3 /* TwitterHeart.json in Resources */ = {isa = PBXBuildFile; fileRef = 32ECB3CF23054ABC000AA3F3 /* TwitterHeart.json */; };
 		F612AC8B148A63B9359B282D /* Pods_SwiftAwesomeProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7334C4B167B7CFD92DEA62B /* Pods_SwiftAwesomeProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +72,14 @@
 		329B149523026B48007217D4 /* SAPJSONServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPJSONServiceProtocol.swift; sourceTree = "<group>"; };
 		329B14972302773D007217D4 /* SAPFlickrPhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPFlickrPhotoModel.swift; sourceTree = "<group>"; };
 		329B149A230277CF007217D4 /* SAPFlickrSearchTransformType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPFlickrSearchTransformType.swift; sourceTree = "<group>"; };
+		32D1E021230A55CE0056C6A3 /* SAPLottieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPLottieModel.swift; sourceTree = "<group>"; };
+		32D1E023230A568C0056C6A3 /* SAPLottieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPLottieCell.swift; sourceTree = "<group>"; };
+		32D1E025230A569F0056C6A3 /* SAPLottieCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPLottieCellViewModel.swift; sourceTree = "<group>"; };
+		32D1E029230ABB470056C6A3 /* SAPAnimationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPAnimationFactory.swift; sourceTree = "<group>"; };
+		32D1E02B230ABDA70056C6A3 /* SAPAnimatedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPAnimatedButton.swift; sourceTree = "<group>"; };
+		32ECB3CB23051F27000AA3F3 /* SAPLottieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPLottieViewController.swift; sourceTree = "<group>"; };
+		32ECB3CD23051FE6000AA3F3 /* SAPLottieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPLottieViewModel.swift; sourceTree = "<group>"; };
+		32ECB3CF23054ABC000AA3F3 /* TwitterHeart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TwitterHeart.json; sourceTree = "<group>"; };
 		682C2278A5CAE26EB6C148D0 /* Pods-SwiftAwesomeProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftAwesomeProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftAwesomeProject/Pods-SwiftAwesomeProject.debug.xcconfig"; sourceTree = "<group>"; };
 		C7334C4B167B7CFD92DEA62B /* Pods_SwiftAwesomeProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftAwesomeProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -83,6 +99,7 @@
 		323BCD9422F944C90067D2E0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				32ECB3CA23051EC5000AA3F3 /* Lottie */,
 				325812782301823400A54C86 /* SearchList */,
 				3290048D22FBD55B00D18F87 /* ContactList */,
 				323BCD9522F944DE0067D2E0 /* Home */,
@@ -103,6 +120,7 @@
 		323BCD9A22F945A20067D2E0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				32D1E020230A55B60056C6A3 /* Lottie */,
 				329B149923027743007217D4 /* FlickrSearch */,
 				323BCD9B22F945D10067D2E0 /* SAPHomeModel.swift */,
 				3290049522FBD79100D18F87 /* SAPContactModel.swift */,
@@ -235,6 +253,52 @@
 			name = FlickrSearch;
 			sourceTree = "<group>";
 		};
+		32D1E01F230A55840056C6A3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				32D1E023230A568C0056C6A3 /* SAPLottieCell.swift */,
+				32D1E025230A569F0056C6A3 /* SAPLottieCellViewModel.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		32D1E020230A55B60056C6A3 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				32D1E021230A55CE0056C6A3 /* SAPLottieModel.swift */,
+			);
+			name = Lottie;
+			sourceTree = "<group>";
+		};
+		32D1E027230ABAF20056C6A3 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				32D1E029230ABB470056C6A3 /* SAPAnimationFactory.swift */,
+				32D1E02B230ABDA70056C6A3 /* SAPAnimatedButton.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		32D1E028230ABB100056C6A3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				32ECB3CF23054ABC000AA3F3 /* TwitterHeart.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		32ECB3CA23051EC5000AA3F3 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				32D1E028230ABB100056C6A3 /* Resources */,
+				32D1E027230ABAF20056C6A3 /* Animation */,
+				32D1E01F230A55840056C6A3 /* Cell */,
+				32ECB3CB23051F27000AA3F3 /* SAPLottieViewController.swift */,
+				32ECB3CD23051FE6000AA3F3 /* SAPLottieViewModel.swift */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 		CA68675F16BDCD59AAD0FFB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,6 +376,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32ECB3D023054ABD000AA3F3 /* TwitterHeart.json in Resources */,
 				3271159C22F9320B0057504D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +402,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -351,6 +417,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -393,22 +460,29 @@
 				323BCD9C22F945D10067D2E0 /* SAPHomeModel.swift in Sources */,
 				3293DB4E22FD2AE300CC48DF /* SAPPopupWrapperNavigationViewController.swift in Sources */,
 				3271159522F9320A0057504D /* AppDelegate.swift in Sources */,
+				32D1E024230A568C0056C6A3 /* SAPLottieCell.swift in Sources */,
 				325812832301851C00A54C86 /* GlobalConstant.swift in Sources */,
+				32D1E022230A55CE0056C6A3 /* SAPLottieModel.swift in Sources */,
+				32ECB3CC23051F27000AA3F3 /* SAPLottieViewController.swift in Sources */,
 				329B149B230277CF007217D4 /* SAPFlickrSearchTransformType.swift in Sources */,
 				3293DB4B22FD147B00CC48DF /* SAPContactEditViewModel.swift in Sources */,
 				3290049822FBD7ED00D18F87 /* SAPContactCell.swift in Sources */,
+				32ECB3CE23051FE6000AA3F3 /* SAPLottieViewModel.swift in Sources */,
 				329B1490230269BE007217D4 /* SAPFlickrSearchResponse.swift in Sources */,
 				323BCD9922F945670067D2E0 /* SAPHomeViewModel.swift in Sources */,
 				323BCDA122F946D40067D2E0 /* SAPHomeCellViewModel.swift in Sources */,
+				32D1E02C230ABDA70056C6A3 /* SAPAnimatedButton.swift in Sources */,
 				3290049422FBD76700D18F87 /* SAPContactCellViewModel.swift in Sources */,
 				3258127F230182F900A54C86 /* SAPSearchListCell.swift in Sources */,
 				3258127C2301829100A54C86 /* SAPSearchListViewModel.swift in Sources */,
 				323BCD9722F945230067D2E0 /* SAPHomeViewController.swift in Sources */,
 				323BCD9F22F946A40067D2E0 /* SAPHomeCell.swift in Sources */,
+				32D1E026230A569F0056C6A3 /* SAPLottieCellViewModel.swift in Sources */,
 				3293DB4922FD144400CC48DF /* SAPContactEditViewController.swift in Sources */,
 				3290048F22FBD6E900D18F87 /* SAPContactViewController.swift in Sources */,
 				3290049622FBD79100D18F87 /* SAPContactModel.swift in Sources */,
 				329B14982302773D007217D4 /* SAPFlickrPhotoModel.swift in Sources */,
+				32D1E02A230ABB470056C6A3 /* SAPAnimationFactory.swift in Sources */,
 				3258127A2301826700A54C86 /* SAPSearchListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
