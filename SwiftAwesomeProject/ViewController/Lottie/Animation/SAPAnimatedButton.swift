@@ -9,19 +9,8 @@
 import UIKit
 import Lottie
 
-class SAPAnimatedButton: UIView, SAPAnimation {
-    init() {
-        super.init(frame: .null)
-        let animatedButton = self.create()
-        self.addSubview(animatedButton)
-        animatedButton.autoPinEdgesToSuperviewEdges()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    func create() -> UIView {
+class SAPAnimatedButton: SAPAnimation {
+    override func create() -> UIView {
         let button = AnimatedButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.animation = Animation.named("TwitterHeart")
@@ -32,7 +21,7 @@ class SAPAnimatedButton: UIView, SAPAnimation {
         return button
     }
     
-    func autoLayout() {
+    override func autoLayout() {
         self.autoSetDimension(.width, toSize: 300)
         self.autoSetDimension(.height, toSize: 300)
         self.autoCenterInSuperview()

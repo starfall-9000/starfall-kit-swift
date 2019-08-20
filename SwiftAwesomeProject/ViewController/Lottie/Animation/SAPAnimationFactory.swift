@@ -8,13 +8,42 @@
 
 import UIKit
 
-protocol SAPAnimation: UIView {
+protocol SAPAnimationProtocol {
     func create() -> UIView
     func autoLayout()
+    func play()
+}
+
+open class SAPAnimation: UIView, SAPAnimationProtocol {
+    init() {
+        super.init(frame: .null)
+        let animatedButton = self.create()
+        self.addSubview(animatedButton)
+        animatedButton.autoPinEdgesToSuperviewEdges()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
+            guard let self = self else { return }
+            self.play()
+        }
+    }
+
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    open func create() -> UIView {
+        return UIView()
+    }
+    
+    open func autoLayout() {
+    }
+    
+    open func play() {
+    }
 }
 
 enum SAPAnimationType: Int {
     case AnimatedButton
+    case AnimationView
 }
 
 class SAPAnimationFactory: NSObject {
@@ -27,7 +56,9 @@ class SAPAnimationFactory: NSObject {
     func getAnimation(type: SAPAnimationType) -> SAPAnimation {
         switch type {
         case .AnimatedButton:
-            return SAPAnimatedButton.init()
+            return SAPAnimatedButton()
+        case .AnimationView:
+            return SAPAnimationView()
         }
     }
 }
