@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		32070842230BB22600BCE372 /* SAPAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32070841230BB22600BCE372 /* SAPAnimationView.swift */; };
+		321B9226230BE36900FD668B /* SAPAnimatedSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B9225230BE36900FD668B /* SAPAnimatedSwitch.swift */; };
 		323BCD9722F945230067D2E0 /* SAPHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BCD9622F945230067D2E0 /* SAPHomeViewController.swift */; };
 		323BCD9922F945670067D2E0 /* SAPHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BCD9822F945670067D2E0 /* SAPHomeViewModel.swift */; };
 		323BCD9C22F945D10067D2E0 /* SAPHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BCD9B22F945D10067D2E0 /* SAPHomeModel.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		19EDD9E705A684D2270A347F /* Pods-SwiftAwesomeProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftAwesomeProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftAwesomeProject/Pods-SwiftAwesomeProject.release.xcconfig"; sourceTree = "<group>"; };
 		32070841230BB22600BCE372 /* SAPAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPAnimationView.swift; sourceTree = "<group>"; };
+		321B9225230BE36900FD668B /* SAPAnimatedSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPAnimatedSwitch.swift; sourceTree = "<group>"; };
 		323BCD9622F945230067D2E0 /* SAPHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPHomeViewController.swift; sourceTree = "<group>"; };
 		323BCD9822F945670067D2E0 /* SAPHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPHomeViewModel.swift; sourceTree = "<group>"; };
 		323BCD9B22F945D10067D2E0 /* SAPHomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPHomeModel.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				32D1E029230ABB470056C6A3 /* SAPAnimationFactory.swift */,
 				32D1E02B230ABDA70056C6A3 /* SAPAnimatedButton.swift */,
 				32070841230BB22600BCE372 /* SAPAnimationView.swift */,
+				321B9225230BE36900FD668B /* SAPAnimatedSwitch.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 				329B149B230277CF007217D4 /* SAPFlickrSearchTransformType.swift in Sources */,
 				3293DB4B22FD147B00CC48DF /* SAPContactEditViewModel.swift in Sources */,
 				3290049822FBD7ED00D18F87 /* SAPContactCell.swift in Sources */,
+				321B9226230BE36900FD668B /* SAPAnimatedSwitch.swift in Sources */,
 				32ECB3CE23051FE6000AA3F3 /* SAPLottieViewModel.swift in Sources */,
 				329B1490230269BE007217D4 /* SAPFlickrSearchResponse.swift in Sources */,
 				32070842230BB22600BCE372 /* SAPAnimationView.swift in Sources */,

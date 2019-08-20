@@ -16,8 +16,9 @@ class SAPLottieViewModel: ListViewModel<Model, SAPLottieCellViewModel> {
     
     func getListItem() -> [SAPLottieModel] {
         return [
-            SAPLottieModel(title: "Animation Button", desc: "Click This Button"),
-            SAPLottieModel(title: "Animation View")
+            SAPLottieModel(title: "Animation Button", desc: "Click this button"),
+            SAPLottieModel(title: "Animation View"),
+            SAPLottieModel(title: "Animation Switch", desc: "Click this button")
         ]
     }
 }

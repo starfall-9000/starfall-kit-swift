@@ -44,6 +44,7 @@ open class SAPAnimation: UIView, SAPAnimationProtocol {
 enum SAPAnimationType: Int {
     case AnimatedButton
     case AnimationView
+    case AnimatedSwitch
 }
 
 class SAPAnimationFactory: NSObject {
@@ -59,6 +60,8 @@ class SAPAnimationFactory: NSObject {
             return SAPAnimatedButton()
         case .AnimationView:
             return SAPAnimationView()
+        case .AnimatedSwitch:
+            return SAPAnimatedSwitch()
         }
     }
 }
