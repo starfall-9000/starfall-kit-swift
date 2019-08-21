@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		32070842230BB22600BCE372 /* SAPAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32070841230BB22600BCE372 /* SAPAnimationView.swift */; };
+		321001E5230D47CC001C8EB3 /* ReactionButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321001E4230D47CC001C8EB3 /* ReactionButtonExtension.swift */; };
 		321B9226230BE36900FD668B /* SAPAnimatedSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B9225230BE36900FD668B /* SAPAnimatedSwitch.swift */; };
 		321B9229230BF46B00FD668B /* SAPReactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B9228230BF46B00FD668B /* SAPReactionViewController.swift */; };
 		321B922B230BF48E00FD668B /* SAPReactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B922A230BF48E00FD668B /* SAPReactionViewModel.swift */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		19EDD9E705A684D2270A347F /* Pods-SwiftAwesomeProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftAwesomeProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftAwesomeProject/Pods-SwiftAwesomeProject.release.xcconfig"; sourceTree = "<group>"; };
 		32070841230BB22600BCE372 /* SAPAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPAnimationView.swift; sourceTree = "<group>"; };
+		321001E4230D47CC001C8EB3 /* ReactionButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionButtonExtension.swift; sourceTree = "<group>"; };
 		321B9225230BE36900FD668B /* SAPAnimatedSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPAnimatedSwitch.swift; sourceTree = "<group>"; };
 		321B9228230BF46B00FD668B /* SAPReactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPReactionViewController.swift; sourceTree = "<group>"; };
 		321B922A230BF48E00FD668B /* SAPReactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPReactionViewModel.swift; sourceTree = "<group>"; };
@@ -104,6 +106,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		321001E2230D4792001C8EB3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				321001E3230D47A4001C8EB3 /* Reactions */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		321001E3230D47A4001C8EB3 /* Reactions */ = {
+			isa = PBXGroup;
+			children = (
+				321001E4230D47CC001C8EB3 /* ReactionButtonExtension.swift */,
+			);
+			path = Reactions;
+			sourceTree = "<group>";
+		};
 		321B9227230BF3F800FD668B /* Reactions */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				329B149223026AA1007217D4 /* APIServices */,
+				321001E2230D4792001C8EB3 /* Extension */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -495,6 +514,7 @@
 				321B9229230BF46B00FD668B /* SAPReactionViewController.swift in Sources */,
 				329B1490230269BE007217D4 /* SAPFlickrSearchResponse.swift in Sources */,
 				32070842230BB22600BCE372 /* SAPAnimationView.swift in Sources */,
+				321001E5230D47CC001C8EB3 /* ReactionButtonExtension.swift in Sources */,
 				323BCD9922F945670067D2E0 /* SAPHomeViewModel.swift in Sources */,
 				323BCDA122F946D40067D2E0 /* SAPHomeCellViewModel.swift in Sources */,
 				32D1E02C230ABDA70056C6A3 /* SAPAnimatedButton.swift in Sources */,

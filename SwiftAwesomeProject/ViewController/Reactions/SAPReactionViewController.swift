@@ -9,6 +9,8 @@
 import UIKit
 import DDMvvm
 import Reactions
+import RxCocoa
+import RxSwift
 
 class SAPReactionViewController: Page<SAPReactionViewModel> {
     let contentView = UIView()
@@ -26,6 +28,14 @@ class SAPReactionViewController: Page<SAPReactionViewModel> {
         setupReactionSelector()
         setupReactionButton()
         setupReactionButtonWithSelector()
+    }
+    
+    override func bindViewAndViewModel() {
+        super.bindViewAndViewModel()
+        
+        guard let viewModel = viewModel else { return }
+        viewModel.rxSelectedReaction ~> reactionButton.rx.reaction => disposeBag
+        viewModel.rxIsSelectedReaction ~> reactionButton.rx.isSelected => disposeBag
     }
     
     private func setupReactionSelector() {
@@ -67,15 +77,13 @@ class SAPReactionViewController: Page<SAPReactionViewModel> {
     }
     
     @objc func reactionDidChanged(_ sender: AnyObject) {
-        reactionButton.reaction = reactionSelector.selectedReaction ?? reactionButton.reaction
-        if (!reactionButton.isSelected) {
-            reactionButton.isSelected = true
-        }
+        viewModel?.rxSelectedReaction.accept(reactionSelector.selectedReaction)
+        viewModel?.rxIsSelectedReaction.accept(true)
     }
 }
 
 extension SAPReactionViewController: ReactionFeedbackDelegate {
     func reactionFeedbackDidChanged(_ feedback: ReactionFeedback?) {
-        print(feedback ?? "")
+        viewModel?.rxReactionFeedback.accept(feedback)
     }
 }

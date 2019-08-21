@@ -8,7 +8,11 @@
 
 import UIKit
 import DDMvvm
+import RxCocoa
+import Reactions
 
 class SAPReactionViewModel: ViewModel<Model> {
-
+    let rxSelectedReaction = BehaviorRelay<Reaction?> (value: nil)
+    let rxIsSelectedReaction = BehaviorRelay<Bool> (value: false)
+    let rxReactionFeedback = BehaviorRelay<ReactionFeedback?> (value: nil)
 }
