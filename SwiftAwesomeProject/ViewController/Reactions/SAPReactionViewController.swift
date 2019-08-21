@@ -14,6 +14,7 @@ class SAPReactionViewController: Page<SAPReactionViewModel> {
     let contentView = UIView()
     let reactionSelector = ReactionSelector()
     let reactionButton = ReactionButton()
+    let reactionButtonWithSelector = ReactionButton()
 
     override func initialize() {
         super.initialize()
@@ -24,6 +25,7 @@ class SAPReactionViewController: Page<SAPReactionViewModel> {
         
         setupReactionSelector()
         setupReactionButton()
+        setupReactionButtonWithSelector()
     }
     
     private func setupReactionSelector() {
@@ -32,9 +34,7 @@ class SAPReactionViewController: Page<SAPReactionViewModel> {
         reactionSelector.autoPinEdge(toSuperviewEdge: .top, withInset: 100)
         reactionSelector.autoAlignAxis(toSuperviewAxis: .vertical)
         reactionSelector.autoSetDimensions(to: .init(width: 282, height: 52))
-        
         reactionSelector.addTarget(self, action: #selector(reactionDidChanged(_:)), for: .valueChanged)
-        reactionSelector.feedbackDelegate = self
     }
     
     private func setupReactionButton() {
@@ -50,6 +50,20 @@ class SAPReactionViewController: Page<SAPReactionViewModel> {
             $0.neutralTintColor = .gray
             $0.alignment        = .centerLeft
         }
+    }
+    
+    private func setupReactionButtonWithSelector() {
+        let buttonSelector = ReactionSelector()
+        buttonSelector.reactions = Reaction.facebook.all
+        buttonSelector.feedbackDelegate = self
+        
+        contentView.addSubview(reactionButtonWithSelector)
+        reactionButtonWithSelector.reaction = Reaction.facebook.like
+        reactionButtonWithSelector.autoPinEdge(.top, to: .bottom, of: reactionButton, withOffset: SAPMargin.big)
+        reactionButtonWithSelector.autoAlignAxis(toSuperviewAxis: .vertical)
+        reactionButtonWithSelector.autoSetDimensions(to: .init(width: 100, height: 40))
+        reactionButtonWithSelector.config = ReactionButtonConfig() { $0.alignment = .centerLeft }
+        reactionButtonWithSelector.reactionSelector = buttonSelector
     }
     
     @objc func reactionDidChanged(_ sender: AnyObject) {
