@@ -1,5 +1,5 @@
 //
-//  ReactionButtonExtension.swift
+//  SAPReactionButtonExtension.swift
 //  SwiftAwesomeProject
 //
 //  Created by An Binh on 8/21/19.
