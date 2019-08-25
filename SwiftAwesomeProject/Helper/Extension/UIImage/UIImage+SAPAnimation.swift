@@ -24,13 +24,28 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 
 extension UIImage {
     
-    public class func gifImageWithData(_ data: Data) -> UIImage? {
+    public class func imageWithData(_ data: Data, extension ext: NSString) -> UIImage? {
         guard let source = CGImageSourceCreateWithData(data as CFData, nil) else {
             print("image doesn't exist")
             return nil
         }
-        
-        return UIImage.animatedImageWithSource(source)
+        if (ext == "gif") {
+            let gifDict = [
+                "property": kCGImagePropertyGIFDictionary,
+                "unclampedDelay": kCGImagePropertyGIFUnclampedDelayTime,
+                "delay": kCGImagePropertyGIFDelayTime
+            ]
+            return UIImage.animatedImageWithSource(source, props: gifDict)
+        }
+        if (ext == "apng") {
+            let apngDict = [
+                "property": kCGImagePropertyPNGDictionary,
+                "unclampedDelay": kCGImagePropertyAPNGUnclampedDelayTime,
+                "delay": kCGImagePropertyAPNGDelayTime
+            ]
+            return UIImage.animatedImageWithSource(source, props: apngDict)
+        }
+        return nil
     }
     
     public class func gifImageWithURL(_ gifUrl:String) -> UIImage? {
@@ -43,40 +58,47 @@ extension UIImage {
             print("image named \"\(gifUrl)\" into NSData")
             return nil
         }
-        
-        return gifImageWithData(imageData)
+        return imageWithData(imageData, extension: "gif")
     }
     
     public class func gifImageWithName(_ name: String) -> UIImage? {
-        guard let bundleURL = Bundle.main
-            .url(forResource: name, withExtension: "gif") else {
-                print("SwiftGif: This image named \"\(name)\" does not exist")
-                return nil
-        }
-        guard let imageData = try? Data(contentsOf: bundleURL) else {
-            print("SwiftGif: Cannot turn image named \"\(name)\" into NSData")
-            return nil
-        }
-        
-        return gifImageWithData(imageData)
+        guard let imageData = animatedData(name: name, extension: "gif") else { return nil }
+        return imageWithData(imageData, extension: "gif")
     }
     
-    class func delayForImageAtIndex(_ index: Int, source: CGImageSource!) -> Double {
+    public class func apngImageWithName(_ name: String) -> UIImage? {
+        guard let imageData = animatedData(name: name, extension: "png") else { return nil }
+        return imageWithData(imageData, extension: "apng")
+    }
+    
+    public class func animatedData(name: String, extension ext: String) -> Data? {
+        guard let bundleURL = Bundle.main.url(forResource: name, withExtension: ext) else {
+            print("SwiftGif: This image named \"\(name).\(ext)\" does not exist")
+            return nil
+        }
+        guard let imageData = try? Data(contentsOf: bundleURL) else {
+            print("SwiftGif: Cannot turn image named \"\(name).\(ext)\" into NSData")
+            return nil
+        }
+        return imageData
+    }
+    
+    class func delayForImageAtIndex(_ index: Int, source: CGImageSource!, props: [String: CFString]) -> Double {
         var delay = 0.1
         
         let cfProperties = CGImageSourceCopyPropertiesAtIndex(source, index, nil)
         let gifProperties: CFDictionary = unsafeBitCast(
             CFDictionaryGetValue(cfProperties,
-                                 Unmanaged.passUnretained(kCGImagePropertyGIFDictionary).toOpaque()),
+                                 Unmanaged.passUnretained(props["property"]!).toOpaque()),
             to: CFDictionary.self)
         
         var delayObject: AnyObject = unsafeBitCast(
             CFDictionaryGetValue(gifProperties,
-                                 Unmanaged.passUnretained(kCGImagePropertyGIFUnclampedDelayTime).toOpaque()),
+                                 Unmanaged.passUnretained(props["unclampedDelay"]!).toOpaque()),
             to: AnyObject.self)
         if delayObject.doubleValue == 0 {
             delayObject = unsafeBitCast(CFDictionaryGetValue(gifProperties,
-                                                             Unmanaged.passUnretained(kCGImagePropertyGIFDelayTime).toOpaque()), to: AnyObject.self)
+                                                             Unmanaged.passUnretained(props["delay"]!).toOpaque()), to: AnyObject.self)
         }
         
         delay = delayObject as! Double
@@ -134,7 +156,7 @@ extension UIImage {
         return gcd
     }
     
-    class func animatedImageWithSource(_ source: CGImageSource) -> UIImage? {
+    class func animatedImageWithSource(_ source: CGImageSource, props: [String: CFString]) -> UIImage? {
         let count = CGImageSourceGetCount(source)
         var images = [CGImage]()
         var delays = [Int]()
@@ -145,7 +167,7 @@ extension UIImage {
             }
             
             let delaySeconds = UIImage.delayForImageAtIndex(Int(i),
-                                                            source: source)
+                                                            source: source, props: props)
             delays.append(Int(delaySeconds * 1000.0)) // Seconds to ms
         }
         

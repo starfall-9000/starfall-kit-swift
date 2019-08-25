@@ -13,6 +13,8 @@
 		321B9229230BF46B00FD668B /* SAPReactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B9228230BF46B00FD668B /* SAPReactionViewController.swift */; };
 		321B922B230BF48E00FD668B /* SAPReactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321B922A230BF48E00FD668B /* SAPReactionViewModel.swift */; };
 		322024E8230F823900B748F1 /* SAPReactionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322024E7230F823900B748F1 /* SAPReactionExtension.swift */; };
+		322024EF230FD30100B748F1 /* pikachu.gif in Resources */ = {isa = PBXBuildFile; fileRef = 322024EE230FD30100B748F1 /* pikachu.gif */; };
+		322024F3230FD4B000B748F1 /* pinwheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 322024F2230FD4AF00B748F1 /* pinwheel.png */; };
 		323BCD9722F945230067D2E0 /* SAPHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BCD9622F945230067D2E0 /* SAPHomeViewController.swift */; };
 		323BCD9922F945670067D2E0 /* SAPHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BCD9822F945670067D2E0 /* SAPHomeViewModel.swift */; };
 		323BCD9C22F945D10067D2E0 /* SAPHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BCD9B22F945D10067D2E0 /* SAPHomeModel.swift */; };
@@ -25,7 +27,7 @@
 		325812832301851C00A54C86 /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 325812822301851C00A54C86 /* GlobalConstant.swift */; };
 		3271159522F9320A0057504D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3271159422F9320A0057504D /* AppDelegate.swift */; };
 		3271159C22F9320B0057504D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3271159B22F9320B0057504D /* Assets.xcassets */; };
-		3284F05D230E72280065D1EC /* UIImage+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284F05C230E72280065D1EC /* UIImage+GIF.swift */; };
+		3284F05D230E72280065D1EC /* UIImage+SAPAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284F05C230E72280065D1EC /* UIImage+SAPAnimation.swift */; };
 		3290048F22FBD6E900D18F87 /* SAPContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3290048E22FBD6E900D18F87 /* SAPContactViewController.swift */; };
 		3290049122FBD72700D18F87 /* SAPContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3290049022FBD72700D18F87 /* SAPContactViewModel.swift */; };
 		3290049422FBD76700D18F87 /* SAPContactCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3290049322FBD76700D18F87 /* SAPContactCellViewModel.swift */; };
@@ -58,6 +60,8 @@
 		321B9228230BF46B00FD668B /* SAPReactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPReactionViewController.swift; sourceTree = "<group>"; };
 		321B922A230BF48E00FD668B /* SAPReactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPReactionViewModel.swift; sourceTree = "<group>"; };
 		322024E7230F823900B748F1 /* SAPReactionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPReactionExtension.swift; sourceTree = "<group>"; };
+		322024EE230FD30100B748F1 /* pikachu.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pikachu.gif; sourceTree = "<group>"; };
+		322024F2230FD4AF00B748F1 /* pinwheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinwheel.png; sourceTree = "<group>"; };
 		323BCD9622F945230067D2E0 /* SAPHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPHomeViewController.swift; sourceTree = "<group>"; };
 		323BCD9822F945670067D2E0 /* SAPHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPHomeViewModel.swift; sourceTree = "<group>"; };
 		323BCD9B22F945D10067D2E0 /* SAPHomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPHomeModel.swift; sourceTree = "<group>"; };
@@ -72,7 +76,7 @@
 		3271159422F9320A0057504D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3271159B22F9320B0057504D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		327115A022F9320B0057504D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3284F05C230E72280065D1EC /* UIImage+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+GIF.swift"; sourceTree = "<group>"; };
+		3284F05C230E72280065D1EC /* UIImage+SAPAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+SAPAnimation.swift"; sourceTree = "<group>"; };
 		3290048E22FBD6E900D18F87 /* SAPContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPContactViewController.swift; sourceTree = "<group>"; };
 		3290049022FBD72700D18F87 /* SAPContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPContactViewModel.swift; sourceTree = "<group>"; };
 		3290049322FBD76700D18F87 /* SAPContactCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPContactCellViewModel.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 		321001E3230D47A4001C8EB3 /* Reactions */ = {
 			isa = PBXGroup;
 			children = (
+				322024F2230FD4AF00B748F1 /* pinwheel.png */,
+				322024EE230FD30100B748F1 /* pikachu.gif */,
 				321001E4230D47CC001C8EB3 /* SAPReactionButtonExtension.swift */,
 				322024E7230F823900B748F1 /* SAPReactionExtension.swift */,
 			);
@@ -140,7 +146,7 @@
 		322024EB230F99E100B748F1 /* UIImage */ = {
 			isa = PBXGroup;
 			children = (
-				3284F05C230E72280065D1EC /* UIImage+GIF.swift */,
+				3284F05C230E72280065D1EC /* UIImage+SAPAnimation.swift */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -429,8 +435,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				322024EF230FD30100B748F1 /* pikachu.gif in Resources */,
 				32ECB3D023054ABD000AA3F3 /* TwitterHeart.json in Resources */,
 				3271159C22F9320B0057504D /* Assets.xcassets in Resources */,
+				322024F3230FD4B000B748F1 /* pinwheel.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,7 +541,7 @@
 				323BCD9922F945670067D2E0 /* SAPHomeViewModel.swift in Sources */,
 				323BCDA122F946D40067D2E0 /* SAPHomeCellViewModel.swift in Sources */,
 				32D1E02C230ABDA70056C6A3 /* SAPAnimatedButton.swift in Sources */,
-				3284F05D230E72280065D1EC /* UIImage+GIF.swift in Sources */,
+				3284F05D230E72280065D1EC /* UIImage+SAPAnimation.swift in Sources */,
 				3290049422FBD76700D18F87 /* SAPContactCellViewModel.swift in Sources */,
 				3258127F230182F900A54C86 /* SAPSearchListCell.swift in Sources */,
 				3258127C2301829100A54C86 /* SAPSearchListViewModel.swift in Sources */,

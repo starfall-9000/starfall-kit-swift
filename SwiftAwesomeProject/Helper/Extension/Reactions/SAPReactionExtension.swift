@@ -8,13 +8,15 @@
 
 import Reactions
 
-enum GapoReactionType: String {
+public enum GapoReactionType: String {
     case like = "gapo-like"
     case love = "gapo-love"
     case haha = "gapo-haha"
     case wow = "gapo-wow"
     case sad = "gapo-sad"
     case angry = "gapo-angry"
+    case pikachu = "sap--pikachu"
+    case pinwheel = "sap--pinwheel"
 }
 
 extension Reaction {
@@ -46,7 +48,7 @@ extension Reaction {
         public static let all: [Reaction] = [gapo.like, gapo.love, gapo.haha, gapo.wow, gapo.sad, gapo.angry]
         
         // MARK: - Convenience Methods
-        private static func reactionWithId(_ type: GapoReactionType) -> Reaction {
+        public static func reactionWithId(_ type: GapoReactionType) -> Reaction {
             var color: UIColor = .black
             var title: String = ""
             var icon: UIImage? = nil
@@ -76,6 +78,15 @@ extension Reaction {
                 color = UIColor(r: 167, g: 130, b: 189)
                 title = "Angry"
                 break
+            case .pikachu:
+                color = UIColor(r: 167, g: 130, b: 189)
+                title = "Pikachu"
+                icon = UIImage.gifImageWithName("pikachu")
+                break
+            case .pinwheel:
+                color = UIColor(r: 167, g: 130, b: 189)
+                title = "Pinwheel"
+                icon = UIImage.apngImageWithName("pinwheel")
             }
             
             return Reaction(id: type.rawValue, title: title, color: color, icon: icon ?? imageWithName(type.rawValue))

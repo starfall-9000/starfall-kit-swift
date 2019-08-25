@@ -40,6 +40,13 @@ class SAPReactionViewController: Page<SAPReactionViewModel> {
     
     private func setupReactionSelector() {
         let reactionSelector = customReactionSelector()
+        var listReactions = reactionSelector.reactions
+        listReactions.removeLast()
+        listReactions.removeLast()
+        listReactions.append(Reaction.gapo.reactionWithId(.pikachu))
+        listReactions.append(Reaction.gapo.reactionWithId(.pinwheel))
+        reactionSelector.reactions = listReactions
+        
         contentView.addSubview(reactionSelector)
         reactionSelector.autoPinEdge(toSuperviewEdge: .top, withInset: 100)
         reactionSelector.autoAlignAxis(toSuperviewAxis: .vertical)
