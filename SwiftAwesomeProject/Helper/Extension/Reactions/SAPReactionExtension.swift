@@ -52,6 +52,7 @@ extension Reaction {
             var color: UIColor = .black
             var title: String = ""
             var icon: UIImage? = nil
+            var alternativeIcon: UIImage? = nil
             
             switch type {
             case .like:
@@ -87,9 +88,10 @@ extension Reaction {
                 color = UIColor(r: 167, g: 130, b: 189)
                 title = "Pinwheel"
                 icon = UIImage.apngImageWithName("pinwheel")
+                alternativeIcon = imageWithName("gapo-angry")
             }
             
-            return Reaction(id: type.rawValue, title: title, color: color, icon: icon ?? imageWithName(type.rawValue))
+            return Reaction(id: type.rawValue, title: title, color: color, icon: icon ?? imageWithName(type.rawValue), alternativeIcon: alternativeIcon)
         }
         
         private static func imageWithName(_ name: String) -> UIImage! {

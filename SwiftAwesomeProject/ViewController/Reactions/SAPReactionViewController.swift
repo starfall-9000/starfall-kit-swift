@@ -34,7 +34,7 @@ class SAPReactionViewController: Page<SAPReactionViewModel> {
         super.bindViewAndViewModel()
         
         guard let viewModel = viewModel else { return }
-        viewModel.rxSelectedReaction ~> reactionButton.rx.reaction => disposeBag
+        viewModel.rxSelectedReaction <~> reactionButtonWithSelector.rx.reaction => disposeBag
         viewModel.rxIsSelectedReaction ~> reactionButton.rx.isSelected => disposeBag
     }
     
@@ -89,6 +89,7 @@ class SAPReactionViewController: Page<SAPReactionViewModel> {
     }
     
     @objc func reactionDidChanged(_ sender: AnyObject) {
+        NSLog("reactionDidChanged - %@", reactionSelector?.selectedReaction?.id ?? "lll")
         viewModel?.rxSelectedReaction.accept(reactionSelector?.selectedReaction)
         viewModel?.rxIsSelectedReaction.accept(true)
     }
@@ -96,6 +97,7 @@ class SAPReactionViewController: Page<SAPReactionViewModel> {
 
 extension SAPReactionViewController: ReactionFeedbackDelegate {
     func reactionFeedbackDidChanged(_ feedback: ReactionFeedback?) {
+        NSLog("reactionFeedbackDidChanged - %@", feedback?.localizedString ?? "hha")
         viewModel?.rxReactionFeedback.accept(feedback)
     }
 }

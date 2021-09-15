@@ -15,6 +15,7 @@
 		322024E8230F823900B748F1 /* SAPReactionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322024E7230F823900B748F1 /* SAPReactionExtension.swift */; };
 		322024EF230FD30100B748F1 /* pikachu.gif in Resources */ = {isa = PBXBuildFile; fileRef = 322024EE230FD30100B748F1 /* pikachu.gif */; };
 		322024F3230FD4B000B748F1 /* pinwheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 322024F2230FD4AF00B748F1 /* pinwheel.png */; };
+		3233D40B2346F49F00F86BF9 /* animation-home.json in Resources */ = {isa = PBXBuildFile; fileRef = 3233D40A2346F49F00F86BF9 /* animation-home.json */; };
 		323BCD9722F945230067D2E0 /* SAPHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BCD9622F945230067D2E0 /* SAPHomeViewController.swift */; };
 		323BCD9922F945670067D2E0 /* SAPHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BCD9822F945670067D2E0 /* SAPHomeViewModel.swift */; };
 		323BCD9C22F945D10067D2E0 /* SAPHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323BCD9B22F945D10067D2E0 /* SAPHomeModel.swift */; };
@@ -62,6 +63,7 @@
 		322024E7230F823900B748F1 /* SAPReactionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPReactionExtension.swift; sourceTree = "<group>"; };
 		322024EE230FD30100B748F1 /* pikachu.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pikachu.gif; sourceTree = "<group>"; };
 		322024F2230FD4AF00B748F1 /* pinwheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinwheel.png; sourceTree = "<group>"; };
+		3233D40A2346F49F00F86BF9 /* animation-home.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "animation-home.json"; sourceTree = "<group>"; };
 		323BCD9622F945230067D2E0 /* SAPHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPHomeViewController.swift; sourceTree = "<group>"; };
 		323BCD9822F945670067D2E0 /* SAPHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPHomeViewModel.swift; sourceTree = "<group>"; };
 		323BCD9B22F945D10067D2E0 /* SAPHomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAPHomeModel.swift; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 		32D1E028230ABB100056C6A3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3233D40A2346F49F00F86BF9 /* animation-home.json */,
 				32ECB3CF23054ABC000AA3F3 /* TwitterHeart.json */,
 			);
 			path = Resources;
@@ -438,6 +441,7 @@
 				322024EF230FD30100B748F1 /* pikachu.gif in Resources */,
 				32ECB3D023054ABD000AA3F3 /* TwitterHeart.json in Resources */,
 				3271159C22F9320B0057504D /* Assets.xcassets in Resources */,
+				3233D40B2346F49F00F86BF9 /* animation-home.json in Resources */,
 				322024F3230FD4B000B748F1 /* pinwheel.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -683,6 +687,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 98H6RD4RN4;
 				INFOPLIST_FILE = SwiftAwesomeProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -702,6 +707,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 98H6RD4RN4;
 				INFOPLIST_FILE = SwiftAwesomeProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

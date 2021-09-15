@@ -15,4 +15,10 @@ class SAPReactionViewModel: ViewModel<Model> {
     let rxSelectedReaction = BehaviorRelay<Reaction?> (value: nil)
     let rxIsSelectedReaction = BehaviorRelay<Bool> (value: false)
     let rxReactionFeedback = BehaviorRelay<ReactionFeedback?> (value: nil)
+    
+    override func react() {
+        rxSelectedReaction.subscribe(onNext: { (reaction) in
+            NSLog("subscribe - %@", reaction?.id ?? "haha")
+        }) => disposeBag
+    }
 }
